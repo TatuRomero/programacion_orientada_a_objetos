@@ -114,5 +114,14 @@ function draw() {
 
   particulas = particulas.filter((pelota) => pelota.estaViva);
 
-  console.log(particulas.length);
+  
+  noFill();
+  stroke(252, 99, 145);
+  strokeWeight(1);
+
+  for (let i = 0; i < particulas.length-1; i++){  
+  line(particulas[i].posX; particulas[i].posY;particulas[i+1].posX; particulas[i+1].posY ) }
+
+
 }
+console.log(particulas.length);
