@@ -5,12 +5,13 @@ class Particula {
     this.posX = _x;
     this.posY = _y;
     this.estaViva = true;
-    this.tiempoVida = round(random(100, 200));
-    this.tamano = 50;
+    this.tiempoVida = round(random(10, 200));
+    this.tamano = random(10, 50);
+    this.color = color(random(150), random(150), random(50));
   }
   update() {
     this.tiempoVida -= 1;
-    if (this.tiempoVida <= 0) {
+    if (this.tiempoVida <= 0 || this.tamano <= 0) {
       this.estaViva = false;
       return;
     }
@@ -19,7 +20,7 @@ class Particula {
     this.tamano -= 0.5;
   }
   display() {
-    fill(255);
+    fill(this.color);
     noStroke();
     circle(this.posX, this.posY, this.tiempoVida);
   }
