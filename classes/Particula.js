@@ -11,7 +11,7 @@ class Particula {
   }
   update() {
     this.tiempoVida -= 1;
-    if (this.tiempoVida <= 0 || this.tamano <= 0) {
+    if (this.tiempoVida <= 0) {
       this.estaViva = false;
       return;
     }
